@@ -1,0 +1,433 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, .question-title, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+html {
+  font-size: 62.5%;
+  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+  overflow-y: scroll;
+  /* Keeps page centered in all browsers regardless of content height */
+  -webkit-text-size-adjust: 100%;
+  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+  -ms-text-size-adjust: 100%;
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+  box-sizing: border-box;
+  /* Apply a natural box layout model to the document; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */ }
+
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit; }
+
+body {
+  background: white;
+  /* Fallback for when there is no custom background color defined. */ }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  /* tables still need 'cellspacing="0"' in the markup */
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption, th, td {
+  font-weight: normal;
+  text-align: left; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:hover,
+a:active {
+  outline: 0; }
+
+a img {
+  border: 0; }
+
+/* Variables */
+/* Colors */
+/* Responsive */
+/* Base */
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  -m-oz-osx-font-smoothing: grayscale;
+  -w-ebkit-font-smoothing: antialiased;
+  background-color: white;
+  color: #656E7E;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1;
+  transition: background 0.5s linear; }
+
+h2, .question-title,
+h2 a,
+.question-title a {
+  color: #454b56;
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 26px; }
+
+h3 {
+  color: #454b56;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 26px; }
+
+ol li {
+  line-height: 2.1rem;
+  list-style: decimal;
+  margin-bottom: 13px; }
+
+p {
+  line-height: 2.1rem;
+  margin-bottom: 26px; }
+
+a {
+  color: #815281;
+  text-decoration: none; }
+
+pre {
+  background-color: #2A2E3E;
+  border-radius: 4px;
+  color: #959CAD;
+  font-family: monospace;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  overflow: scroll;
+  padding: 15px 20px; }
+
+h2 code, .question-title code,
+h3 code,
+h4 code,
+p code,
+label code {
+  background: #f8f8f8;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  font-family: Monospace;
+  font-weight: normal;
+  line-height: 0;
+  margin: 0px 3px;
+  padding: 4px 6px 3px; }
+
+strong {
+  font-weight: bold; }
+
+.btn, #wp-submit {
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1;
+  padding: 11px 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .25s ease-in-out; }
+
+.btn-primary, #wp-submit {
+  background-color: #815281;
+  border: 0;
+  border-bottom: 2px solid #623e62;
+  color: white; }
+
+.btn-primary:hover, #wp-submit:hover {
+  background-color: #714871;
+  border-bottom-color: #432a43; }
+
+.msg, #login-error {
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  margin-bottom: 26px;
+  padding: 12px 14px;
+  text-transform: uppercase; }
+
+.msg-error, #login-error {
+  background: #F85766; }
+
+/* Structure */
+.content-body {
+  margin: 0 auto;
+  max-width: 600px; }
+
+/* Helpers */
+.loading {
+  background-color: white;
+  background-image: url("../img/loading.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 140px; }
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid #dddddd;
+  border-top: 6px solid #B83933;
+  margin-bottom: 26px;
+  overflow: hidden;
+  padding: 20px 0;
+  width: 100%; }
+
+.site-header .title {
+  float: left;
+  font-weight: bold;
+  width: 40%; }
+
+.site-header .account {
+  float: right;
+  padding-top: 9px;
+  text-align: right;
+  width: 40%; }
+
+.header-brand {
+  overflow: hidden; }
+
+.header-brand-logo {
+  background-image: url("../img/logo.svg");
+  background-repeat: no-repeat;
+  display: block;
+  height: 54px;
+  text-indent: -9999em;
+  vertical-align: middle;
+  width: 120px; }
+
+.account .btn, .account #wp-submit {
+  font-size: 1.3rem; }
+
+.a-join,
+.a-log-out {
+  background: #bbb;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  margin-left: 10px; }
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid #dddddd;
+  font-size: 1.4rem;
+  margin-top: 52px;
+  overflow: hidden;
+  padding: 20px 0;
+  width: 100%; }
+
+.footer-about {
+  float: left; }
+
+.footer-credits {
+  float: right; }
+
+/* Question */
+.question-box {
+  background-color: white;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  box-shadow: 0 6px 10px 0 rgba(120, 120, 140, 0.2); }
+
+.question-header {
+  border-bottom: 2px solid #f1f1f1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 26px 26px 0; }
+
+.question-body p {
+  margin-bottom: 26px; }
+
+.question-body p:first-of-type {
+  margin-top: -13px; }
+
+/* Question Answers */
+.question-answer {
+  list-style: none;
+  margin-bottom: 0; }
+
+.question-answer-radio {
+  margin-left: -9999em;
+  position: absolute; }
+
+.question-answer-label {
+  background-image: url("../img/unchecked.svg");
+  background-position: 25px center;
+  background-repeat: no-repeat;
+  background-size: 22px 42px;
+  border-bottom: 1px solid #f1f1f1;
+  cursor: pointer;
+  display: block;
+  line-height: 1.4;
+  padding: 20px 20px 20px 62px; }
+
+.question-answer-label pre {
+  margin-bottom: 0; }
+
+.question-answer:last-child .question-answer-label {
+  margin-bottom: 0; }
+
+.question-answer-radio:checked ~ .question-answer-label {
+  background-image: url("../img/checked.svg");
+  background-color: #f1f1f1; }
+
+.question-answer-label-correct,
+.question-answer-radio:checked ~ .question-answer-label-correct {
+  b-ackground-color: #8cce24;
+  background-image: url("../img/checked-correct.svg"); }
+
+.question-answer-label-incorrect,
+.question-answer-radio:checked ~ .question-answer-label-incorrect {
+  b-ackground-color: #fb402f;
+  background-image: url("../img/incorrect.svg"); }
+
+/* Question Footer */
+.question-footer {
+  border-top: 1px solid #f1f1f1;
+  padding: 25px; }
+
+/* Question Footer: Nav */
+.question-nav {
+  display: inline-block; }
+
+.question-next {
+  border: 2px solid #ccc;
+  color: #815281; }
+
+.question-next:hover {
+  border: 2px solid #b3b3b3; }
+
+/* Question Footer: Message */
+#question-message {
+  display: inline-block;
+  font-style: italic;
+  margin-left: 13px; }
+
+#question-message.correct {
+  color: #090; }
+
+#question-message.incorrect {
+  color: #C33; }
+
+/* Question: More info */
+#question-more-info {
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  display: none;
+  margin: 0 26px 26px; }
+
+#question-more-info h4 {
+  background: #f1f1f1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-weight: bold;
+  padding: 12px 14px; }
+
+#question-more-info .text {
+  padding: 12px 14px; }
+
+#question-more-info p:last-of-type {
+  margin-bottom: 0; }
+
+/* Page: Join */
+.auth-set, .login-username,
+.login-password,
+.login-remember {
+  margin-bottom: 26px; }
+
+.auth-label, .login-username label,
+.login-password label {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 26px;
+  width: 18%; }
+
+.auth-input, .login-username input,
+.login-password input {
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 1.6rem;
+  margin-right: 26px;
+  padding: 8px 10px;
+  width: 40%; }
+
+.auth-help {
+  color: #999;
+  display: inline-block;
+  font-style: italic; }
+
+/* Page: Login */
+#login-error p {
+  margin-bottom: 0; }
+
+/* Media breakpoints */
+@media (max-width: 600px) {
+  .site-header {
+    margin-bottom: 0;
+    padding-left: 20px;
+    padding-right: 20px; }
+
+  .site-header .account {
+    width: 60%; }
+
+  .question-box {
+    border-left: 0;
+    border-radius: 0;
+    border-right: 0;
+    border-top: 0; }
+
+  .question-title {
+    font-size: 1.9rem; }
+
+  .site-footer {
+    padding-left: 20px;
+    padding-right: 20px; } }
+@media (max-width: 400px) {
+  .header-brand-logo {
+    background-image: url("../img/logo-icon.svg");
+    height: 48px;
+    width: 48px; } }

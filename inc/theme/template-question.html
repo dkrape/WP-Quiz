@@ -1,0 +1,53 @@
+<script id="question-template" type="text/template">
+	
+	<div id="question-<%= data.id %>" class="question">
+
+		<form name="question" id="question-form" ref="<%= data.id %>">
+		
+			<div class="question-header">
+				
+				<h2 class="question-title">
+					<%= data.title.rendered %>
+				</h2>
+				
+				<div class="question-body">
+					<%= data.content.rendered %>
+				</div>
+				
+			</div>
+			
+			<ol class="question-answers">
+			
+			<% _.each( data._answers, function( answer, index ) { %>
+				
+				<li class="question-answer">
+					<input type="radio" name="answer" class="question-answer-radio" value="<%= index %>" id="answer_<%= index %>"><label for="answer_<%= index %>" class="question-answer-label"><%= answer %></label>
+				</li>
+				
+			<% }); %>
+			
+			</ol>
+			
+			<div class="question-footer">
+					
+				<input type="submit" value="Check answer" id="question-check-answer-btn" class="btn btn-primary question-nav-btn question-check-answer">
+				
+				<a href="#" id="question-next-btn" class="btn btn-secondary question-nav-btn question-next" ref="">Next question &rarr;</a>
+				
+				<div id="question-message"></div>
+				
+			</div>
+			
+		</form>
+		
+		<div id="question-more-info">
+			
+			<h4>More about the answer:</h4>
+			
+			<div class="text"></div>
+			
+		</div>
+		
+	</div>
+	
+</script>

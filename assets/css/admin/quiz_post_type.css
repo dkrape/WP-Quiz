@@ -1,0 +1,27 @@
+.answers { margin-bottom: 10px; }
+
+.single-answer { margin-bottom: 22px; }
+
+.answer-field { margin-right: 10px; width: 60%; }
+
+.answer-correct-wrapper { padding-right: 24px; vertical-align: top; }
+
+.single-answer label { margin-right: 10px; vertical-align: top; }
+
+.answer-section-hr { margin: 26px 0 20px; }
+
+.handy-text {
+	background-color: #f9f9f9;
+	border: 1px solid #dfdfdf;
+	border-spacing: 0;
+	color: #666;
+	font-size: 90%;
+	font-style: italic;
+	margin-top: 1em;
+	padding: 0 8px;
+	}
+	
+.handy-text li {
+	list-style: disc;
+	margin-left: 14px;
+	}
